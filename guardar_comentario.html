@@ -1,10 +1,10 @@
 <?php
 include("conexion.php");
 
-$nombre = $_GET['nombre'];
-$visita = $_GET['visita'];
-$opinion = $_GET['opinion'];
-$comentario = $_GET['comentario'];
+$nombre = $_POST['nombre'];
+$visita = $_POSTT['visita'];
+$opinion = $_POST['opinion'];
+$comentario = $_POST['comentario'];
 
 $consulta = "INSERT INTO formulario (nombre, visita, opinion, comentario)
 VALUES ('$nombre', '$visita', '$opinion', '$comentario')";
@@ -12,4 +12,5 @@ VALUES ('$nombre', '$visita', '$opinion', '$comentario')";
 mysqli_query($conexion, $consulta);
 echo "Gracias por compartir tu opinión sobre el Río Achichilco.";
 ?>
+
 
